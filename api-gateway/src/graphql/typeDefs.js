@@ -19,10 +19,19 @@ const typeDefs= gql`
         website: String!
     }
 
+    type User {
+        email: String!
+        id: ID!
+    }
+
     type Query {
         listings: [Listing!]!
         heroku: [Heroku!]!
         partner: [Partner!]!
+    }
+
+    type Mutation {
+        createUser(email: String!, password: String!): User!
     }
 
 
